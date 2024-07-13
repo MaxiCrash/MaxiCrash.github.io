@@ -594,7 +594,7 @@ var worldStore = new Store('world', {
     console.assert(_.isArray(bets));
     self.state.allBets.push.apply(self.state.allBets, bets);
     self.emitter.emit('change', self.state);
-  });
+  }); 
 
   Dispatcher.registerCallback('TOGGLE_HOTKEYS', function() {
     self.state.hotkeysEnabled = !self.state.hotkeysEnabled;
